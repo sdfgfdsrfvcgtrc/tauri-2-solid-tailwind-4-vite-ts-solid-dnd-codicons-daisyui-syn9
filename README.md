@@ -9,6 +9,8 @@ SYN9 provides a pre-configured framework with common user interface templates an
 
 Created for the development and research of [AI-Context-DSL](https://github.com/sdfgfdsrfvcgtrc/AI-Context-DSL). YAML-based DSL for AI-powered development: annotations, context binding, and code generation.
 
+![Демонстрация SYN9](src/assets/demo.gif)
+
 ## 🚀 Features
 
 Out of the box, SYN9 includes:
