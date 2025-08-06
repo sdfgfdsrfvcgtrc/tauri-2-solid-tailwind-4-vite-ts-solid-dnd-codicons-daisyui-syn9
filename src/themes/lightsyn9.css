@@ -1,0 +1,41 @@
+/* src/themes/lightsyn9.css */
+
+.theme-lightsyn9 {
+
+  --color-primary: #64748b; /* slate-500 */
+  --color-secondary: #94a3b8; /* slate-400 */
+  
+
+  --color-background: #f1f5f9; /* slate-100 */
+  --color-text: #0f172a; /* slate-900 */
+  
+
+  --color-accent: #3b82f6; /* blue-500 */
+  --color-accent-hover: #2563eb; /* blue-600 */
+  --color-accent-vite: #747bff;
+  --color-accent-solid: #2f5d90;
+  --color-accent-tauri: #24c8db;
+  
+
+  --color-panel-bg: rgba(255, 255, 255, 0.7); 
+  --color-panel-bg-active: rgba(240, 240, 240, 0.7); 
+  
+
+  --color-border: #cbd5e1; /* slate-300 */
+  
+
+  --color-tab-bar-bg: rgba(226, 232, 240, 0.5); /* slate-200*/
+  --color-tab-bg: rgba(203, 213, 225, 0.5); /* slate-300*/
+  --color-tab-bg-hover: rgba(148, 163, 184, 0.5); /* slate-400*/
+  --color-tab-text: #334155; /* slate-700 */
+  --color-tab-active-bg: rgba(255, 255, 255, 0.9); 
+  --color-tab-active-text: #0f172a; /* slate-900 */
+  --color-tab-close-hover-bg: rgba(148, 163, 184, 0.3); /* slate-400*/
+  
+
+  --color-header-button-text: rgba(15, 23, 42, 0.9); /* slate-900*/
+  --color-header-button-hover-bg: rgba(148, 163, 184, 0.3); /* slate-400*/
+  
+
+  --color-tab-content-bg: rgba(241, 245, 249, 0.5); /* slate-100*/
+}

@@ -1,0 +1,54 @@
+{
+  "name": "syn9",
+  "version": "0.1.0",
+  "description": "A feature-rich Tauri 2.0 starter template with SolidJS, Tailwind CSS, and DaisyUI. Includes pre-built themes, i18n, tab management, and more.",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "clean": "rm -rf node_modules/.vite src-tauri/target",
+    "syn9": "npm run clean && tauri dev",
+    "tauri": "tauri"
+  },
+  "keywords": [
+    "tauri",
+    "solidjs",
+    "tailwindcss",
+    "daisyui",
+    "template",
+    "boilerplate",
+    "starter",
+    "desktop",
+    "app",
+    "i18n",
+    "themes"
+  ],
+  "author": "Nikolai Zhelannikov  zhelannikov.n.a@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "#"
+  },
+  "bugs": {
+    "url": "#"
+  },
+  "homepage": "#",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.8",
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-opener": "^2.0.0",
+    "@thisbeyond/solid-dnd": "^0.7.5",
+    "@vscode/codicons": "^0.0.36",
+    "daisyui": "^5.0.46",
+    "solid-js": "^1.9.3",
+    "tailwindcss": "^4.1.8"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3",
+    "vite-plugin-solid": "^2.11.0"
+  }
+}
