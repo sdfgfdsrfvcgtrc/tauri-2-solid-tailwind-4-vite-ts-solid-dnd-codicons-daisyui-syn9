@@ -75,7 +75,7 @@ To build the application for production:
 
 ```bash
 npm run tauri build
-```
+
 🛠️ Project Structure
 syn9/
 ├── src/
@@ -96,7 +96,7 @@ syn9/
 ├── tsconfig.json           # TypeScript configuration
 ├── vite.config.ts          # Vite build configuration
 └── README.md               # This file
-
+```
 ## Technologies Used
 
 *   [Tauri](https://tauri.app/)
