@@ -75,7 +75,7 @@ To build the application for production:
 
 ```bash
 npm run tauri build
-
+```
 🛠️ Project Structure
 syn9/
 ├── src/
