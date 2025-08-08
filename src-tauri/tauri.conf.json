@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schema.tauri.app/config/2",
+  "$schema": "https://schema.tauri.app/config/2.json",
   "productName": "syn9",
   "version": "0.1.0",
   "identifier": "com.syn9.app",
@@ -30,6 +30,15 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "createUpdaterArtifacts": true
+  },
+  "plugins": {
+    "updater": {
+	  "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDE3QkU3N0ExMjlENkY4RTcKUldUbitOWXBvWGUrRjM1cFlzNEZnUmd1Rm5ITGhEQWhsclQxWVAvU05oSGtkZkFkK3JhWmVHRzkK",
+      "endpoints": [
+        "https://github.com/sdfgfdsrfvcgtrc/tauri-2-solid-tailwind-4-vite-ts-solid-dnd-codicons-daisyui-syn9/releases/download/v0.1.0/latest.json"
+      ]
+    }
   }
 }

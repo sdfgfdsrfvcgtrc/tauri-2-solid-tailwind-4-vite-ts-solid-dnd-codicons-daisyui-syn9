@@ -25,10 +25,10 @@ import { ActivityBar } from './components/ui/ActivityBar';
 import { Sidebar } from './components/ui/Sidebar';
 import { StatusBar } from './components/ui/StatusBar';
 
+import { AboutModal } from './components/ui/AboutModal';
 
 import { ShortcutService } from './shortcuts/service';
 import { createAppShortcuts } from './shortcuts';
-
 
 function App() {
   const [greetMsg, setGreetMsg] = createSignal("");
@@ -39,6 +39,7 @@ function App() {
   const [leftPanelWidth, setLeftPanelWidth] = createSignal(256);
   const [currentSection, setCurrentSection] = createSignal("welcome");
 
+
   const [tabs, setTabs] = createSignal([
     {
       id: "welcome",
@@ -47,6 +48,7 @@ function App() {
     }
   ]);
   const [activeTab, setActiveTab] = createSignal("welcome");
+
 
   const tabsWithNumbers = createMemo(() => {
     let newTabCounter = 1;
@@ -58,6 +60,7 @@ function App() {
     });
   });
 
+
   const activeTabTitle = createMemo(() => {
     const activeTabId = activeTab();
     const tab = tabsWithNumbers().find(t => t.id === activeTabId);
@@ -68,6 +71,7 @@ function App() {
     }
     return t(tab.tKey);
   });
+
 
   onMount(() => {
     const savedLanguage = localStorage.getItem("app_language");
@@ -141,35 +145,24 @@ function App() {
 
   let shortcutService: ShortcutService | null = null;
 
-
   const handleLogTest = () => {
     console.log("The handleLogTest handler is called from the App!");
-
     alert("The Ctrl+Shift+L hotkey has worked! (internal)");
   };
 
-
   createEffect(() => {
     console.log("Initialization of the internal keyboard shortcut service...");
-
-    shortcutService = new ShortcutService({
-
-    });
-
+    shortcutService = new ShortcutService({});
 
     const shortcutHandlers = {
       logTest: handleLogTest,
-
     };
 
-
     const appShortcuts = createAppShortcuts(shortcutHandlers);
-
 
     appShortcuts.forEach(shortcut => {
       shortcutService!.register(shortcut);
     });
-
 
     onCleanup(() => {
       console.log("Destroying the internal keyboard shortcut service...");
@@ -181,9 +174,14 @@ function App() {
   });
 
 
+
+  const [isAboutModalOpen, setIsAboutModalOpen] = createSignal(false);
+
+
   return (
     <div class="h-screen flex flex-col">
-      <Header t={t} />
+
+      <Header t={t} onOpenAbout={() => setIsAboutModalOpen(true)} />
 
       <main class="flex flex-1 overflow-hidden">
         <ActivityBar activeIcon={activeIcon()} setActiveIcon={setActiveIcon} />
@@ -218,6 +216,13 @@ function App() {
       </main>
 
       <StatusBar activeTabTitle={activeTabTitle()} />
+
+
+      <AboutModal
+        isOpen={isAboutModalOpen()}
+        onClose={() => setIsAboutModalOpen(false)}
+        t={t}
+      />
     </div>
   );
 }
